@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0B6E78">
+<title>Eyano — démo v1.0</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🩺%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#F4F7F8;--cd:#fff;--ink:#12313A;--mu:#4A6670;--ln:#D5E0E4;--ac:#0B6E78;--wb:#FFF1D6;--wt:#7A4300;--ub:#B3261E;--dm:#FFD84D;--di:#1A1A1A;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0F1A1E;--cd:#172429;--ink:#E6F0F2;--mu:#9DB5BC;--ln:#2A3D44;--ac:#5CC6D0;--wb:#3A2A0A;--wt:#FFCB7A}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0F1A1E;--cd:#172429;--ink:#E6F0F2;--mu:#9DB5BC;--ln:#2A3D44;--ac:#5CC6D0;--wb:#3A2A0A;--wt:#FFCB7A}
+*{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--dm);z-index:10}
+#demo{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--dm);color:var(--di);font-weight:700;font-size:14px;padding:6px 14px;text-align:center}
+main{max-width:640px;margin:0 auto;padding:14px 14px 96px}
+h1{font-size:30px;margin:8px 0 2px}h2{font-size:23px;margin:6px 0 8px;line-height:1.25}h3{font-size:15px;margin:0 0 4px;color:var(--mu);font-weight:600}
+a{color:var(--ac)}
+.row{display:block;background:var(--cd);border:1px solid var(--ln);border-radius:10px;padding:12px 14px;margin:8px 0;color:inherit;text-decoration:none;min-height:48px}
+.row b{display:block;font-size:18px}.row span{color:var(--mu);font-size:15px}
+.bl{background:var(--cd);border-left:4px solid var(--ac);padding:10px 14px;margin:10px 0;border-radius:0 8px 8px 0}
+.bl p{margin:0 0 4px}
+.tag{display:inline-block;font-size:13px;font-weight:700;border-radius:6px;padding:2px 8px;background:var(--dm);color:var(--di);margin-right:6px}
+.warn{background:var(--wb);color:var(--wt);border:1px solid var(--wt);border-radius:8px;padding:10px 14px;margin:10px 0;font-weight:600}
+.mu{color:var(--mu);font-size:14px}
+dt{color:var(--mu);font-size:14px;margin-top:6px}dd{margin:0}dl{margin:0}
+input,select{font:inherit;width:100%;min-height:48px;padding:8px 12px;border:1px solid var(--ln);border-radius:10px;background:var(--cd);color:var(--ink)}
+#bar{position:fixed;left:0;right:0;bottom:0;padding:8px 14px calc(8px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--ln);z-index:9}
+#bar a{display:block;max-width:612px;margin:0 auto;min-height:52px;line-height:52px;text-align:center;background:var(--ub);color:#fff;font-weight:700;border-radius:12px;text-decoration:none}
+:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+summary{min-height:44px;line-height:44px;cursor:pointer}
+</style>
+</head>
+<body>
+<div id="demo">DÉMO — données fictives, à ne pas utiliser pour votre santé</div>
+<main id="app"></main>
+<nav id="bar"><a href="#urgences">Aide et premiers secours</a></nav>
+<script>
+const F="Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement.";
+const ET="Étape DÉMO 1 — [texte fictif]. Étape DÉMO 2 — [texte fictif].";
+const MD=[
+{id:"maladies",t:"Maladies",d:"Comprendre une maladie, la prévenir, savoir quand consulter"},
+{id:"epidemies",t:"Épidémies",d:"Situation selon la source, zones, mesures"},
+{id:"secours",t:"Premiers secours",d:"Gestes et situations nécessitant de l’aide"},
+{id:"aide",t:"Aide et services de santé",d:"Établissements et contacts vérifiés"},
+{id:"journees",t:"Journées de santé",d:"Campagnes annuelles et ressources"},
+{id:"actus",t:"Actualités médicales",d:"Annonces, recommandations, décisions"},
+{id:"examens",t:"Examens médicaux",d:"Comprendre un examen et ses limites"}];
+const D=(p,v,s)=>[["Publication dans Eyano",p],["Dernière vérification",v],["Date de la source",s]];
+const FI=[
+{id:"m1",m:"maladies",t:"Maladie DÉMO 1",s:"Catégorie fictive : infectieuses",a:"2026-10-12",al:"Dernière vérification",d:D("2026-06-10","2026-10-12","2026-05-20"),f:[["En bref",F],["Causes et transmission",F],["Symptômes courants",F],["Prévention",F],["Quand consulter",F],["Signes d’urgence",F],["Repères historiques",F]],src:"SOURCE_DEMO_01",l:["e1","x1"]},
+{id:"m2",m:"maladies",t:"Maladie DÉMO 2",s:"Catégorie fictive : chroniques",a:"2026-10-05",al:"Dernière vérification",d:D("2026-07-02","2026-10-05","2026-06-15"),f:[["En bref",F],["Causes ou facteurs de risque",F],["Symptômes courants",F],["Prévention",F],["Quand consulter",F],["Signes d’urgence",F]],src:"SOURCE_DEMO_01"},
+{id:"e1",m:"epidemies",t:"Épidémie DÉMO 1",s:"Fiche de suivi fictive",d:D("2026-10-13","2026-10-14","2026-10-11"),sb:{s:"En cours selon la source (valeur de démo)",z:"Zones DÉMO A et B (fictives)",c:"120 cas rapportés (chiffre fictif)",ds:"2026-10-10",src:"SOURCE_DEMO_02"},f:[["Mesures de prévention",F],["Consignes officielles",F]],src:"SOURCE_DEMO_02",l:["m1"]},
+{id:"e2",m:"epidemies",t:"Épidémie DÉMO 2",s:"Fiche de suivi fictive",d:D("2026-07-05","2026-07-06","2026-07-03"),sb:{s:"Non précisée",z:"Zone DÉMO C (fictive)",c:"45 cas rapportés (chiffre fictif)",ds:"2026-07-02",src:"SOURCE_DEMO_02"},f:[["Mesures de prévention",F]],src:"SOURCE_DEMO_02",ln:"Aucune fiche Maladie liée pour le moment."},
+{id:"p1",m:"secours",t:"Premier secours DÉMO 1",s:"Situation fictive",a:"2026-09-01",th:180,al:"Révision du protocole",d:D("2026-06-20","2026-09-01","2026-04-15").concat([["Révision du protocole","2026-09-01"]]),f:[["Situation",F],["Variante A (démo)",ET],["Variante B (démo)",ET],["Gestes à éviter",F],["Rappel","Ce contenu ne remplace pas une formation. (texte de démonstration)"]],u:1,src:"SOURCE_DEMO_03"},
+{id:"p2",m:"secours",t:"Premier secours DÉMO 2",s:"Situation fictive",a:"2025-12-01",th:180,al:"Révision du protocole",d:D("2025-12-05","2025-12-05","2025-11-20").concat([["Révision du protocole","2025-12-01"]]),f:[["Situation",F],["Étapes",ET],["Gestes à éviter",F]],u:1,src:"SOURCE_DEMO_03"},
+{id:"a1",m:"aide",t:"Établissement DÉMO 1",s:"Centre de santé fictif",a:"2026-10-08",al:"Vérification des coordonnées",d:[["Publication dans Eyano","2026-07-01"],["Vérification des coordonnées","2026-10-08"],["Vérification des services","2026-10-08"]],f:[["Adresse","Adresse fictive DÉMO, Zone DÉMO A"],["Contact","[numéro fictif, DÉMO]"],["Services déclarés",F]],ex:[["x1","20 unités DÉMO","2026-10-08"],["x2",null,null]],n:"Une structure répertoriée n’est pas forcément ouverte ou disponible au moment de la consultation.",src:"SOURCE_DEMO_06"},
+{id:"a2",m:"aide",t:"Service d’urgence DÉMO 2",s:"Service fictif",a:"2026-10-01",al:"Vérification des coordonnées",d:[["Publication dans Eyano","2026-07-01"],["Vérification des coordonnées","2026-10-01"]],f:[["Adresse","Adresse fictive DÉMO, Zone DÉMO B"],["Contact",null]],n:"Une structure répertoriée n’est pas forcément ouverte ou disponible au moment de la consultation.",src:"SOURCE_DEMO_06"},
+{id:"j1",m:"journees",t:"Journée DÉMO A",s:"Édition en cours",ed:2026,d:D("2026-02-01","2026-02-10","2026-01-20"),f:[["Date annuelle de l’événement","3 mars (date fictive)"],["Année de campagne","2026"],["Thème de l’édition","Thème DÉMO 2026"],["Ressources vérifiées",F]],src:"SOURCE_DEMO_07"},
+{id:"j2",m:"journees",t:"Journée DÉMO B",s:"Ancienne édition",ed:2024,d:D("2024-02-01","2024-02-10","2024-01-20"),f:[["Date annuelle de l’événement","3 mars (date fictive)"],["Année de campagne","2024"],["Thème de l’édition","Thème DÉMO 2024"]],src:"SOURCE_DEMO_07"},
+{id:"n1",m:"actus",t:"Actualité DÉMO 1",s:"Recommandation fictive",e:"Adopté",a:"2026-10-12",al:"Date de l’annonce",d:[["Date de l’annonce","2026-10-12"],["Date de la source","2026-10-12"],["Publication dans Eyano","2026-10-13"],["Dernière vérification","2026-10-14"]],sb:"e1",f:[["Résumé rédigé par Eyano",F],["Ce qui change",F],["Recommandations pratiques",F]],src:"SOURCE_DEMO_04",l:["e1"]},
+{id:"n2",m:"actus",t:"Actualité DÉMO 2",s:"Initiative fictive",e:"Annoncé",a:"2026-10-03",al:"Date de l’annonce",d:[["Date de l’annonce","2026-10-03"],["Date de la source",null],["Publication dans Eyano","2026-10-05"],["Dernière vérification","2026-10-06"]],f:[["Objectifs annoncés",F],["Résultats obtenus","Aucun résultat communiqué à ce jour (démo)."]],src:"SOURCE_DEMO_05"},
+{id:"x1",m:"examens",t:"Examen DÉMO 1",s:"Analyses et tests biologiques (catégorie fictive)",a:"2026-10-12",al:"Dernière vérification",d:D("2026-06-25","2026-10-12","2026-05-30"),f:[["À quoi il sert",F],["Ce qu’il mesure",F],["Limites",F],["Déroulement et préparation",F],["Comprendre les résultats","Explication générale des termes du compte rendu (texte fictif). Aucune valeur de référence n’est affichée. Un résultat s’interprète avec un professionnel de santé."]],src:"SOURCE_DEMO_08",l:["m1"]},
+{id:"x2",m:"examens",t:"Examen DÉMO 2",s:"Mesures et examens complémentaires (catégorie fictive)",a:"2026-04-10",al:"Dernière vérification",d:D("2026-03-01","2026-04-10","2026-02-15"),f:[["À quoi il sert",F],["Ce qu’il mesure",F],["Limites",F],["Comprendre les résultats","Explication générale des termes (texte fictif). Aucune valeur de référence n’est affichée."]],src:"SOURCE_DEMO_08",ln:"Aucune fiche Maladie liée pour le moment."}];
+const $=s=>document.querySelector(s),A=$("#app");
+let off=0,sync=null;
+try{sync=localStorage.getItem("eyano-sync");if(navigator.onLine)localStorage.setItem("eyano-sync",new Date().toISOString().slice(0,10))}catch(e){}
+const now=()=>new Date(Date.now()+off*864e5);
+const age=i=>(now()-new Date(i+"T12:00:00"))/864e5;
+const fmt=i=>i?new Date(i+"T12:00:00").toLocaleDateString("fr-FR",{day:"numeric",month:"long",year:"numeric"}):"non précisée";
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const get=id=>FI.find(x=>x.id===id);
+const vd=f=>(f.d.find(x=>/^(Dernière v|Vérification des coord)/.test(x[0]))||[])[1];
+const old=f=>f.ed!==undefined?f.ed<now().getFullYear():f.a?age(f.a)>(f.th||90):false;
+const bl=(k,v)=>`<div class="bl"><h3>${k}</h3><p>${v}</p></div>`;
+const row=(h,t,d)=>`<a class="row" href="${h}"><b>${t}</b><span>${d}</span></a>`;
+const pr=e=>e[1]?`prix indicatif : ${e[1]}, vérifié le ${fmt(e[2])}. Il peut évoluer.${age(e[2])>90?" Prix ancien : à reconfirmer auprès de l’établissement.":""}`:"prix non communiqué (cela ne signifie jamais que l’examen est gratuit).";
+function tools(){return `<p class="mu">Dernière synchronisation : ${sync?fmt(sync):"aucune"}</p><details><summary>Outils de test (démo)</summary><label class="mu" for="sim">Date du jour simulée</label><select id="sim">${[0,30,90,180,365].map(n=>`<option value="${n}"${n===off?" selected":""}>${n?"+"+n+" jours":"Date réelle"}</option>`).join("")}</select><p class="mu">Seuils d’essai, non validés : 30 jours (situation d’une épidémie), 90 jours (autres contenus), 180 jours (premiers secours).</p></details>`}
+function home(){
+A.innerHTML=`<h1>Eyano</h1><p class="mu">Mini-encyclopédie de santé. Version de démonstration 1.0.</p><input id="q" type="search" placeholder="Rechercher une fiche" aria-label="Rechercher une fiche"><div id="res"></div><div id="mods">${MD.map(m=>row("#m-"+m.id,m.t,m.d)).join("")}</div>`;
+$("#q").oninput=e=>{const q=e.target.value.trim().toLowerCase(),r=q?FI.filter(f=>(f.t+" "+get(f.id).s+" "+MD.find(m=>m.id===f.m).t).toLowerCase().includes(q)):[];
+$("#mods").hidden=!!q;$("#res").innerHTML=q?(r.length?r.map(f=>row("#f-"+f.id,f.t,`<span class="tag">DÉMO</span>${MD.find(m=>m.id===f.m).t}`)).join(""):'<p class="mu">Aucune fiche trouvée.</p>'):""}}
+function mod(id){const m=MD.find(x=>x.id===id);if(!m)return home();
+A.innerHTML=`<a href="#" class="mu">‹ Accueil</a><h2>${m.t}</h2><p class="mu">${m.d}</p>`+FI.filter(f=>f.m===id).map(f=>row("#f-"+f.id,f.t,`<span class="tag">DÉMO</span>${f.s}`)).join("")}
+function urg(){A.innerHTML=`<a href="#" class="mu">‹ Accueil</a><h2>Aide et premiers secours</h2><div class="warn">Contacts d’urgence : en attente de vérification. Aucun numéro n’est affiché tant qu’il n’a pas été vérifié.</div>`+row("#m-secours","Premiers secours","Gestes et situations nécessitant de l’aide")+row("#m-aide","Aide et services de santé","Établissements et contacts vérifiés")}
+function fiche(id){const f=get(id);if(!f)return home();const M=MD.find(m=>m.id===f.m);
+let h=`<a href="#m-${f.m}" class="mu">‹ ${M.t}</a><h2>${f.t}</h2><p><span class="tag">DÉMO</span>${f.s}</p>`;
+if(!navigator.onLine)h+=`<div class="warn">Copie enregistrée sur votre téléphone. Dernière vérification de cette fiche : ${fmt(vd(f))}. Les informations ont pu être corrigées depuis.</div>`;
+if(f.ed!==undefined&&old(f))h+=`<div class="warn">Édition passée (campagne ${f.ed}). Elle ne correspond pas à la campagne actuelle.</div>`;
+else if(old(f))h+=`<div class="warn">Information ancienne. ${f.al} : ${fmt(f.a)}. Elle a pu changer depuis.<br><span class="mu">Seuil d’essai : ${f.th||90} jours, non validé.</span></div>`;
+if(f.e)h+=bl("État de l’annonce",`${f.e}. Cet état ne vaut pas validation par Eyano.`);
+const sb=typeof f.sb==="string"?get(f.sb).sb:f.sb;
+if(sb)h+=`<div class="bl"><h3>Situation selon la source</h3><p><b>${sb.s}</b></p><p>${sb.z}</p><p>${sb.c}</p><p class="mu">Situation rapportée le ${fmt(sb.ds)} · ${sb.src}</p></div>`+(age(sb.ds)>30?`<div class="warn">Information ancienne. Situation rapportée : ${fmt(sb.ds)}. Elle a pu changer depuis.<br><span class="mu">Seuil d’essai : 30 jours, non validé.</span></div>`:"");
+f.f.forEach(([k,v])=>h+=bl(k,v===null?"Contact en attente de vérification.":v));
+if(f.u)h+=bl("Quand demander de l’aide urgente",'<a href="#urgences">Voir Aide et premiers secours</a>');
+if(f.ex)h+=bl("Examens proposés",f.ex.map(e=>`<a href="#f-${e[0]}">${get(e[0]).t}</a> : ${pr(e)}`).join("<br>"));
+if(f.m==="examens"){const a=FI.filter(x=>x.ex&&x.ex.some(e=>e[0]===f.id));h+=bl("Où passer cet examen",a.length?a.map(x=>`<a href="#f-${x.id}">${x.t}</a> : ${pr(x.ex.find(e=>e[0]===f.id))}`).join("<br>")+"<br>L’inscription d’un établissement ne garantit pas que l’examen soit disponible.":"Aucun établissement vérifié pour le moment.")}
+if(f.n)h+=`<p class="mu">${f.n}</p>`;
+if(f.l)h+=bl("Voir aussi",f.l.map(i=>`<a href="#f-${i}">${get(i).t}</a>`).join("<br>"));
+if(f.ln)h+=bl("Voir aussi",f.ln);
+h+=`<div class="bl"><dl>${f.d.map(([k,v])=>`<dt>${k}</dt><dd>${fmt(v)}</dd>`).join("")}<dt>Source</dt><dd>${f.src} (source fictive, sans lien)</dd><dt>Statut de validation Eyano</dt><dd>Donnée de démonstration</dd></dl></div>`;
+A.innerHTML=h}
+function R(){const h=location.hash.slice(1),p=h.split("-");
+if(h==="urgences")urg();else if(p[0]==="m")mod(p.slice(1).join("-"));else if(p[0]==="f")fiche(p[1]);else home();
+if(off)A.insertAdjacentHTML("afterbegin",`<div class="warn">Date du jour simulée : +${off} jours (test)</div>`);
+A.insertAdjacentHTML("beforeend",tools());$("#sim").onchange=e=>{off=+e.target.value;R()};
+$("#bar").hidden=h==="urgences"}
+let last="";addEventListener("hashchange",()=>{if(location.hash!==last)scrollTo(0,0);last=location.hash;R()});
+addEventListener("online",R);addEventListener("offline",R);R();
+try{if("serviceWorker" in navigator&&location.protocol==="https:")navigator.serviceWorker.register("sw.js").catch(()=>{})}catch(e){}
+</script>
+</body>
+</html>
