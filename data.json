@@ -1,0 +1,742 @@
+{
+ "maj": "2026-10-31",
+ "modules": [
+  {
+   "id": "maladies",
+   "t": "Maladies",
+   "d": "Comprendre une maladie, la prévenir, savoir quand consulter"
+  },
+  {
+   "id": "epidemies",
+   "t": "Épidémies",
+   "d": "Situation selon la source, zones, mesures"
+  },
+  {
+   "id": "secours",
+   "t": "Premiers secours",
+   "d": "Gestes et situations nécessitant de l’aide"
+  },
+  {
+   "id": "aide",
+   "t": "Aide et services de santé",
+   "d": "Établissements et contacts vérifiés"
+  },
+  {
+   "id": "journees",
+   "t": "Journées de santé",
+   "d": "Campagnes annuelles et ressources"
+  },
+  {
+   "id": "actus",
+   "t": "Actualités médicales",
+   "d": "Annonces, recommandations, décisions"
+  },
+  {
+   "id": "examens",
+   "t": "Examens médicaux",
+   "d": "Comprendre un examen et ses limites"
+  },
+  {
+   "id": "annexes",
+   "t": "Annexes",
+   "d": "Références, dates et sources"
+  }
+ ],
+ "fiches": [
+  {
+   "id": "m1",
+   "m": "maladies",
+   "t": "Maladie DÉMO 1",
+   "s": "Catégorie fictive : infectieuses",
+   "a": "2026-10-12",
+   "al": "Dernière vérification",
+   "d": [
+    [
+     "Publication dans Eyano",
+     "2026-06-10"
+    ],
+    [
+     "Dernière vérification",
+     "2026-10-12"
+    ],
+    [
+     "Date de la source",
+     "2026-05-20"
+    ]
+   ],
+   "f": [
+    [
+     "En bref",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Causes et transmission",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Symptômes courants",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Prévention",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Quand consulter",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Signes d’urgence",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Repères historiques",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ]
+   ],
+   "src": "SOURCE_DEMO_01",
+   "l": [
+    "e1",
+    "x1"
+   ]
+  },
+  {
+   "id": "m2",
+   "m": "maladies",
+   "t": "Maladie DÉMO 2",
+   "s": "Catégorie fictive : chroniques",
+   "a": "2026-10-05",
+   "al": "Dernière vérification",
+   "d": [
+    [
+     "Publication dans Eyano",
+     "2026-07-02"
+    ],
+    [
+     "Dernière vérification",
+     "2026-10-05"
+    ],
+    [
+     "Date de la source",
+     "2026-06-15"
+    ]
+   ],
+   "f": [
+    [
+     "En bref",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Causes ou facteurs de risque",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Symptômes courants",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Prévention",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Quand consulter",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Signes d’urgence",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ]
+   ],
+   "src": "SOURCE_DEMO_01"
+  },
+  {
+   "id": "e1",
+   "m": "epidemies",
+   "t": "Épidémie DÉMO 1",
+   "s": "Fiche de suivi fictive",
+   "d": [
+    [
+     "Publication dans Eyano",
+     "2026-10-13"
+    ],
+    [
+     "Dernière vérification",
+     "2026-10-14"
+    ],
+    [
+     "Date de la source",
+     "2026-10-11"
+    ]
+   ],
+   "sb": {
+    "s": "En cours selon la source (valeur de démo)",
+    "z": "Zones DÉMO A et B (fictives)",
+    "c": "120 cas rapportés (chiffre fictif)",
+    "ds": "2026-10-10",
+    "src": "SOURCE_DEMO_02"
+   },
+   "f": [
+    [
+     "Mesures de prévention",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Consignes officielles",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ]
+   ],
+   "src": "SOURCE_DEMO_02",
+   "l": [
+    "m1"
+   ]
+  },
+  {
+   "id": "e2",
+   "m": "epidemies",
+   "t": "Épidémie DÉMO 2",
+   "s": "Fiche de suivi fictive",
+   "d": [
+    [
+     "Publication dans Eyano",
+     "2026-07-05"
+    ],
+    [
+     "Dernière vérification",
+     "2026-07-06"
+    ],
+    [
+     "Date de la source",
+     "2026-07-03"
+    ]
+   ],
+   "sb": {
+    "s": "Non précisée",
+    "z": "Zone DÉMO C (fictive)",
+    "c": "45 cas rapportés (chiffre fictif)",
+    "ds": "2026-07-02",
+    "src": "SOURCE_DEMO_02"
+   },
+   "f": [
+    [
+     "Mesures de prévention",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ]
+   ],
+   "src": "SOURCE_DEMO_02",
+   "ln": "Aucune fiche Maladie liée pour le moment."
+  },
+  {
+   "id": "p1",
+   "m": "secours",
+   "t": "Premier secours DÉMO 1",
+   "s": "Situation fictive",
+   "a": "2026-09-01",
+   "th": 180,
+   "al": "Révision du protocole",
+   "d": [
+    [
+     "Publication dans Eyano",
+     "2026-06-20"
+    ],
+    [
+     "Dernière vérification",
+     "2026-09-01"
+    ],
+    [
+     "Date de la source",
+     "2026-04-15"
+    ],
+    [
+     "Révision du protocole",
+     "2026-09-01"
+    ]
+   ],
+   "f": [
+    [
+     "Situation",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Variante A (démo)",
+     "Étape DÉMO 1 — [texte fictif]. Étape DÉMO 2 — [texte fictif]."
+    ],
+    [
+     "Variante B (démo)",
+     "Étape DÉMO 1 — [texte fictif]. Étape DÉMO 2 — [texte fictif]."
+    ],
+    [
+     "Gestes à éviter",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Rappel",
+     "Ce contenu ne remplace pas une formation. (texte de démonstration)"
+    ]
+   ],
+   "u": 1,
+   "src": "SOURCE_DEMO_03"
+  },
+  {
+   "id": "p2",
+   "m": "secours",
+   "t": "Premier secours DÉMO 2",
+   "s": "Situation fictive",
+   "a": "2025-12-01",
+   "th": 180,
+   "al": "Révision du protocole",
+   "d": [
+    [
+     "Publication dans Eyano",
+     "2025-12-05"
+    ],
+    [
+     "Dernière vérification",
+     "2025-12-05"
+    ],
+    [
+     "Date de la source",
+     "2025-11-20"
+    ],
+    [
+     "Révision du protocole",
+     "2025-12-01"
+    ]
+   ],
+   "f": [
+    [
+     "Situation",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Étapes",
+     "Étape DÉMO 1 — [texte fictif]. Étape DÉMO 2 — [texte fictif]."
+    ],
+    [
+     "Gestes à éviter",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ]
+   ],
+   "u": 1,
+   "src": "SOURCE_DEMO_03"
+  },
+  {
+   "id": "a1",
+   "m": "aide",
+   "t": "Établissement DÉMO 1",
+   "s": "Centre de santé fictif",
+   "a": "2026-10-08",
+   "al": "Vérification des coordonnées",
+   "d": [
+    [
+     "Publication dans Eyano",
+     "2026-07-01"
+    ],
+    [
+     "Vérification des coordonnées",
+     "2026-10-08"
+    ],
+    [
+     "Vérification des services",
+     "2026-10-08"
+    ]
+   ],
+   "f": [
+    [
+     "Adresse",
+     "Adresse fictive DÉMO, Zone DÉMO A"
+    ],
+    [
+     "Contact",
+     "[numéro fictif, DÉMO]"
+    ],
+    [
+     "Services déclarés",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ]
+   ],
+   "ex": [
+    [
+     "x1",
+     "20 unités DÉMO",
+     "2026-10-08"
+    ],
+    [
+     "x2",
+     null,
+     null
+    ]
+   ],
+   "n": "Une structure répertoriée n’est pas forcément ouverte ou disponible au moment de la consultation.",
+   "src": "SOURCE_DEMO_06"
+  },
+  {
+   "id": "a2",
+   "m": "aide",
+   "t": "Service d’urgence DÉMO 2",
+   "s": "Service fictif",
+   "a": "2026-10-01",
+   "al": "Vérification des coordonnées",
+   "d": [
+    [
+     "Publication dans Eyano",
+     "2026-07-01"
+    ],
+    [
+     "Vérification des coordonnées",
+     "2026-10-01"
+    ]
+   ],
+   "f": [
+    [
+     "Adresse",
+     "Adresse fictive DÉMO, Zone DÉMO B"
+    ],
+    [
+     "Contact",
+     null
+    ]
+   ],
+   "n": "Une structure répertoriée n’est pas forcément ouverte ou disponible au moment de la consultation.",
+   "src": "SOURCE_DEMO_06"
+  },
+  {
+   "id": "j1",
+   "m": "journees",
+   "t": "Journée DÉMO A",
+   "s": "Édition en cours",
+   "ed": 2026,
+   "d": [
+    [
+     "Publication dans Eyano",
+     "2026-02-01"
+    ],
+    [
+     "Dernière vérification",
+     "2026-02-10"
+    ],
+    [
+     "Date de la source",
+     "2026-01-20"
+    ]
+   ],
+   "f": [
+    [
+     "Date annuelle de l’événement",
+     "15 novembre (date fictive)"
+    ],
+    [
+     "Année de campagne",
+     "2026"
+    ],
+    [
+     "Thème de l’édition",
+     "Thème DÉMO 2026"
+    ],
+    [
+     "Ressources vérifiées",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ]
+   ],
+   "src": "SOURCE_DEMO_07",
+   "jm": "11-15"
+  },
+  {
+   "id": "j2",
+   "m": "journees",
+   "t": "Journée DÉMO B",
+   "s": "Ancienne édition",
+   "ed": 2024,
+   "d": [
+    [
+     "Publication dans Eyano",
+     "2024-02-01"
+    ],
+    [
+     "Dernière vérification",
+     "2024-02-10"
+    ],
+    [
+     "Date de la source",
+     "2024-01-20"
+    ]
+   ],
+   "f": [
+    [
+     "Date annuelle de l’événement",
+     "3 mars (date fictive)"
+    ],
+    [
+     "Année de campagne",
+     "2024"
+    ],
+    [
+     "Thème de l’édition",
+     "Thème DÉMO 2024"
+    ]
+   ],
+   "src": "SOURCE_DEMO_07",
+   "jm": "03-03"
+  },
+  {
+   "id": "n1",
+   "m": "actus",
+   "t": "Actualité DÉMO 1",
+   "s": "Recommandation fictive",
+   "e": "Adopté",
+   "a": "2026-10-12",
+   "al": "Date de l’annonce",
+   "d": [
+    [
+     "Date de l’annonce",
+     "2026-10-12"
+    ],
+    [
+     "Date de la source",
+     "2026-10-12"
+    ],
+    [
+     "Publication dans Eyano",
+     "2026-10-13"
+    ],
+    [
+     "Dernière vérification",
+     "2026-10-14"
+    ]
+   ],
+   "sb": "e1",
+   "f": [
+    [
+     "Résumé rédigé par Eyano",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Ce qui change",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Recommandations pratiques",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ]
+   ],
+   "src": "SOURCE_DEMO_04",
+   "l": [
+    "e1"
+   ]
+  },
+  {
+   "id": "n2",
+   "m": "actus",
+   "t": "Actualité DÉMO 2",
+   "s": "Initiative fictive",
+   "e": "Annoncé",
+   "a": "2026-10-03",
+   "al": "Date de l’annonce",
+   "d": [
+    [
+     "Date de l’annonce",
+     "2026-10-03"
+    ],
+    [
+     "Date de la source",
+     null
+    ],
+    [
+     "Publication dans Eyano",
+     "2026-10-05"
+    ],
+    [
+     "Dernière vérification",
+     "2026-10-06"
+    ]
+   ],
+   "f": [
+    [
+     "Objectifs annoncés",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Résultats obtenus",
+     "Aucun résultat communiqué à ce jour (démo)."
+    ]
+   ],
+   "src": "SOURCE_DEMO_05"
+  },
+  {
+   "id": "x1",
+   "m": "examens",
+   "t": "Examen DÉMO 1",
+   "s": "Analyses et tests biologiques (catégorie fictive)",
+   "a": "2026-10-12",
+   "al": "Dernière vérification",
+   "d": [
+    [
+     "Publication dans Eyano",
+     "2026-06-25"
+    ],
+    [
+     "Dernière vérification",
+     "2026-10-12"
+    ],
+    [
+     "Date de la source",
+     "2026-05-30"
+    ]
+   ],
+   "f": [
+    [
+     "À quoi il sert",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Ce qu’il mesure",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Limites",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Déroulement et préparation",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Comprendre les résultats",
+     "Explication générale des termes du compte rendu (texte fictif). Aucune valeur de référence n’est affichée. Un résultat s’interprète avec un professionnel de santé."
+    ]
+   ],
+   "src": "SOURCE_DEMO_08",
+   "l": [
+    "m1"
+   ]
+  },
+  {
+   "id": "x2",
+   "m": "examens",
+   "t": "Examen DÉMO 2",
+   "s": "Mesures et examens complémentaires (catégorie fictive)",
+   "a": "2026-04-10",
+   "al": "Dernière vérification",
+   "d": [
+    [
+     "Publication dans Eyano",
+     "2026-03-01"
+    ],
+    [
+     "Dernière vérification",
+     "2026-04-10"
+    ],
+    [
+     "Date de la source",
+     "2026-02-15"
+    ]
+   ],
+   "f": [
+    [
+     "À quoi il sert",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Ce qu’il mesure",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Limites",
+     "Texte fictif de démonstration, sans valeur médicale. Il sert uniquement à vérifier la lisibilité sur téléphone : longueur des lignes, taille des caractères et espacement."
+    ],
+    [
+     "Comprendre les résultats",
+     "Explication générale des termes (texte fictif). Aucune valeur de référence n’est affichée."
+    ]
+   ],
+   "src": "SOURCE_DEMO_08",
+   "ln": "Aucune fiche Maladie liée pour le moment."
+  },
+  {
+   "id": "z1",
+   "m": "annexes",
+   "t": "Comprendre les dates et les statuts",
+   "s": "Page de référence (démo)",
+   "d": [
+    [
+     "Publication dans Eyano",
+     "2026-10-20"
+    ],
+    [
+     "Dernière vérification",
+     "2026-10-20"
+    ]
+   ],
+   "f": [
+    [
+     "Publication dans Eyano",
+     "Première mise en ligne de la fiche."
+    ],
+    [
+     "Dernière vérification",
+     "Dernière fois qu’une personne a comparé la fiche à sa source."
+    ],
+    [
+     "Date de la source",
+     "Date du document d’origine, quand elle est connue."
+    ],
+    [
+     "Situation rapportée",
+     "Jour auquel se rapportent les chiffres, selon la source."
+    ],
+    [
+     "Statut de validation Eyano",
+     "Dans cette démo : donnée de démonstration. Le statut « Validé » n’apparaît jamais."
+    ],
+    [
+     "Information ancienne",
+     "Avertissement affiché après un seuil d’essai, non validé. Une information ancienne n’est pas forcément fausse."
+    ]
+   ],
+   "src": "SOURCE_DEMO_00"
+  },
+  {
+   "id": "z2",
+   "m": "annexes",
+   "t": "Sources citées dans la démo",
+   "s": "Liste générée à partir des fiches",
+   "auto": 1,
+   "d": [
+    [
+     "Publication dans Eyano",
+     "2026-10-20"
+    ],
+    [
+     "Dernière vérification",
+     "2026-10-20"
+    ]
+   ],
+   "f": [
+    [
+     "Rappel",
+     "Ces sources sont fictives et n’ont aucun lien. Dans la version réelle, chaque source indiquera son institution, son titre, son lien et sa date."
+    ]
+   ],
+   "src": "SOURCE_DEMO_00"
+  }
+ ],
+ "annonces": [
+  {
+   "id": "a1",
+   "t": "Annonce DÉMO : dépistage gratuit (fictif)",
+   "x": "Texte fictif de démonstration. Aucune information réelle.",
+   "p": "Établissement DÉMO 1 (partenaire fictif)",
+   "debut": "2026-10-25",
+   "fin": "2026-11-30",
+   "cf": "2026-10-28"
+  },
+  {
+   "id": "a2",
+   "t": "Annonce DÉMO expirée (ne doit pas s’afficher)",
+   "x": "Texte fictif.",
+   "p": "Partenaire fictif",
+   "debut": "2026-09-01",
+   "fin": "2026-10-15",
+   "cf": "2026-09-01"
+  }
+ ]
+}
